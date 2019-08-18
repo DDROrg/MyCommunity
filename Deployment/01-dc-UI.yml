@@ -1,0 +1,16 @@
+version: '3.7'
+
+## docker-compose for running MyCommunity-UI in container
+## sudo docker-compose -f "01-dc-UI.yml" up -d
+## sudo docker-compose -f "01-dc-UI.yml" down -v
+services:
+  mycommunity-ui:
+    image: mycommunity-ui
+    container_name: mycommunity-ui-ctn
+    ports:
+      - '80:80'
+    networks:
+      - mycommunity-ntk
+networks:
+  mycommunity-ntk:
+    driver: bridge

@@ -1,0 +1,98 @@
+npm help config
+npm config list
+npm config ls -l
+
+#Remove the proxies by running the following commands.
+npm config rm proxy
+npm config rm https-proxy
+
+#Set npm proxy
+npm config set proxy "http://220487:Jun%402019@proxy.tcs.com:8080/"
+npm config set https-proxy "http://220487:Jun%402019@proxy.tcs.com:8080/"
+
+#Clean cache 
+npm cache clean
+npm cache clean --force
+
+#Uninstall angular-cli 
+npm uninstall -g @angular/cli
+
+#Install angular-cli globally 
+npm install -g @angular/cli
+
+#Install npm locally:
+npm install @angular/cli@latest
+
+# ====================================================
+# https://angular.io/cli
+# Migrate Angular CLI configuration to the new angular.json format:
+ng update @angular/cli
+
+#Update all of your Angular framework packages:
+ng update @angular/core
+
+#Install bootstrap to project
+npm install bootstrap --save
+npm install font-awesome --save
+
+#You can ping the npm registry host and fetch a simple file
+ping registry.npmjs.org
+npm view 
+npm version
+
+# check code coverage
+ng test --codeCoverage=true --watch=false
+
+
+#Generate new component
+ng g component nav-menu
+ng generate component nav-menu
+
+ng g component register-customer
+
+ng generate service transaction --flat=false
+ng generate interface WeatherForecast
+
+# Build
+ng build MyCommunity-UI --configuration="production"
+
+# Build using npm based on package.json in angular project
+npm run build-prod --prefix ../MyCommunity/MyCommunity-UI
+mkdir -p ./build/MyCommunity-UI
+cp -r ../MyCommunity/MyCommunity-UI/dist/MyCommunity-UI ./build/MyCommunity-UI
+# ============================================================
+## Create DEV certificate
+dotnet dev-certs https --clean
+dotnet dev-certs https -ep /home/debabrata/.aspnet/https/local-aspnetapp.pfx -p ZAQpass@1234 -v
+dotnet dev-certs https --trust
+# ============================================================
+dotnet new sln MyCommunity.sln
+dotnet new webapi -o ./MyCommunity.API 
+
+# Add project ref to solution
+dotnet sln MyCommunity.sln add ./MyCommunity.API/MyCommunity.API.csproj
+
+# Create new test project
+dotnet new xunit -o ./MyCommunity.APITest -f netcoreapp2.2 
+
+# Add project ref to solution
+dotnet sln MyCommunity.sln add ./MyCommunity.APITest/MyCommunity.APITest.csproj
+
+# Add project reference to project [command needs to be executed from project folder]
+dotnet add reference ../MyCommunity.API/MyCommunity.API.csproj
+
+# Add nuget package reference
+dotnet add package Microsoft.Extensions.Logging --version 2.2.0
+dotnet add package Microsoft.AspNetCore.Mvc --version 2.2.0
+dotnet add package Moq --version 4.12.0
+
+
+# Create new classLib project
+dotnet new classlib -o ./MyCommunity.DAL
+dotnet new classlib -o ./MyCommunity.Utility
+dotnet sln MyCommunity.sln add ./MyCommunity.DAL/MyCommunity.DAL.csproj
+dotnet sln MyCommunity.sln add ./MyCommunity.Utility/MyCommunity.Utility.csproj
+
+dotnet add reference ../MyCommunity.DAL/MyCommunity.DAL.csproj
+dotnet add reference ../MyCommunity.Utility/MyCommunity.Utility.csproj
+
