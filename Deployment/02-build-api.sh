@@ -1,1 +1,1 @@
-dotnet publish ../MyCommunity/MyCommunity.API/MyCommunity.API.csproj -c Release -o ../../Deployment/build/MyCommunity-API
+dotnet publish ../MyCommunity.API/MyCommunity.API.csproj -c Release -o ../Deployment/build/MyCommunity-API

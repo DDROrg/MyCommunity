@@ -1,1 +1,1 @@
-dotnet test ../MyCommunity/MyCommunity.APITest/MyCommunity.APITest.csproj
+dotnet test ../MyCommunity.APITest/MyCommunity.APITest.csproj
